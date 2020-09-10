@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="header">ToDo List</div>
+  <div class="main">
+    <div class="main-data">
+      <input
+        type="text"
+        placeholder="Type any name"
+        [value]="name"
+        (keyup)="name = $event.target.value"
+      />
+      <button (click)="clickListener()">Add Todo</button>
+    </div>
+
+    <div class="main-result" *ngIf="todoArr.length">
+      <p>Todo Items</p>
+      <div class="box" *ngFor="let x of todoArr; let id = index">
+        <div class="edit-input" *ngIf="editArr[id]">
+          <input
+            type="text"
+            [value]="x"
+            placeholder="Type other name"
+            (keyup.enter)="newName = $event.target.value; resetName(id)"
+          />
+        </div>
+        <span *ngIf="!editArr[id]">{{ x }}</span>
+        <div class="button">
+          <button id="btn-1" (click)="deleteItem(id)">
+            <i class="fas fa-trash-alt"></i>
+          </button>
+          <button id="btn-2" (click)="editItem(id)">
+            <i class="fas fa-edit"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,108 @@
+:host
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  font-family: Arial, Helvetica, sans-serif
+
+.container
+  height: 100vh
+  width: 100vw
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  background-color: white
+
+  .result
+    div
+      height: 60px
+      width: 212px
+      padding: 12px
+      background-color: #B93737CC
+      display: flex
+      flex-direction: column
+      justify-content: flex-end
+      align-items: flex-end
+      border: 2px solid #800000
+      border-radius: 2px
+      color: white
+      text-decoration: bold
+
+
+  .operation
+    display: flex
+
+    .left-opn
+      button
+        background-color: #994242
+        border: 1px solid black
+        color: white
+        text-decoration: bold
+
+
+
+      .btn-c
+        button
+          height: 30px
+          width: 180px
+          background-color: #994242
+          border: 1px solid black
+          color: white
+          text-decoration: bold
+
+    .btn
+      display: flex
+
+      button
+        height: 30px
+        width: 60px
+        color: white
+        border: 1px solid black
+        text-decoration: bold
+
+
+    .right-opn
+      display: flex
+      flex-direction: column
+
+      button
+        height: 30px
+        width: 60px
+        color: white
+        background-color: #800000
+        border: 1px solid black
+        text-decoration: bold
+
+
+.effect8
+  position: relative
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset
+
+.effect8:before, .effect8:after
+  position: absolute
+  z-index: -1
+  -webkit-box-shadow: 0 0 20px rgba(0,0,0,0.8)
+  -moz-box-shadow: 0 0 20px rgba(0,0,0,0.8)
+  box-shadow: 0 0 20px rgba(0,0,0,0.8)
+  top: 10px
+  bottom: 10px
+  left: 0
+  right: 0
+  -moz-border-radius: 100px / 10px
+  border-radius: 100px / 10px
+
+.effect8:after
+
+  right: 10px
+  left: auto
+  -webkit-transform: skew(8deg) rotate(3deg)
+  -moz-transform: skew(8deg) rotate(3deg)
+  -ms-transform: skew(8deg) rotate(3deg)
+  -o-transform: skew(8deg) rotate(3deg)
+  transform: skew(8deg) rotate(3deg)
+
+
+
+

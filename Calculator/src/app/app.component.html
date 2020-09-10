@@ -1,0 +1,46 @@
+<div class="container effect8">
+  <div class="result">
+    <div>
+      <span>{{ str }}</span>
+      <span *ngIf="showExpression">={{ expression }}</span>
+    </div>
+  </div>
+  <div class="operation">
+    <div class="left-opn">
+      <div class="btn-c">
+        <button (click)="clear()">Clear</button>
+      </div>
+
+      <div class="btn">
+        <button (click)="result('7')">7</button>
+        <button (click)="result('8')">8</button>
+        <button (click)="result('9')">9</button>
+      </div>
+
+      <div class="btn">
+        <button (click)="result('4')">4</button>
+        <button (click)="result('5')">5</button>
+        <button (click)="result('6')">6</button>
+      </div>
+
+      <div class="btn">
+        <button (click)="result('1')">1</button>
+        <button (click)="result('2')">2</button>
+        <button (click)="result('3')">3</button>
+      </div>
+
+      <div class="btn">
+        <button (click)="result('0')">0</button>
+        <button (click)="result('.')">.</button>
+        <button (click)="showResult()">=</button>
+      </div>
+    </div>
+    <div class="right-opn">
+      <button (click)="delete()"><i class="fas fa-backspace"></i></button>
+      <button (click)="result('/')">/</button>
+      <button (click)="result('*')">X</button>
+      <button (click)="result('-')">-</button>
+      <button (click)="result('+')">+</button>
+    </div>
+  </div>
+</div>

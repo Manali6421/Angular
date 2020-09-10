@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="main">
+    <input
+      type="text"
+      placeholder="Insert your github username"
+      (keyup)="linkData = $event.target.value"
+    />
+    <button (click)="toGetDetails()">Get Details</button>
+  </div>
+</div>
+
+<div class="result" *ngIf="showResult">
+  <h1>GitHub Data</h1>
+  <div class="table-data">
+    <table class="thead-dark">
+      <tr>
+        <th>Repositories</th>
+      </tr>
+
+      <tr *ngFor="let x of repoData">
+        <td>{{ x }}</td>
+      </tr>
+    </table>
+    <table class="thead-dark">
+      <tr>
+        <th>Gists</th>
+      </tr>
+
+      <tr *ngFor="let y of gistData">
+        <td>{{ y }}</td>
+      </tr>
+    </table>
+    <table class="thead-dark">
+      <tr>
+        <th>Followers</th>
+      </tr>
+
+      <tr *ngFor="let z of followerData">
+        <td>{{ z }}</td>
+      </tr>
+    </table>
+  </div>
+</div>
