@@ -1,0 +1,31 @@
+<div class="main">
+  <div class="container" *ngIf="!showResult">
+    <div class="anagram">
+      <label for="anagram">Anagrams</label>
+      <input
+        type="text"
+        placeholder="Type Any Word"
+        (keyup)="textData = $event.target.value"
+      />
+    </div>
+    <div class="upload-file">
+      <label for="file">Data File</label>
+      <input
+        type="file"
+        placeholder="HTML File Input"
+        #fileInput
+        (change)="changeListener($event)"
+      />
+    </div>
+    <button (click)="clickListener()">Find Anagrams</button>
+  </div>
+
+  <div class="result" *ngIf="showResult">
+    <div class="info">
+      <p>Matching Anograms for word "{{ textData }}"</p>
+    </div>
+    <div class="box">
+      <div class="box-item" *ngFor="let x of resultArr">{{ x }}</div>
+    </div>
+  </div>
+</div>
